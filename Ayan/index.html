@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayan</title>
+    <style>
+                *{
+            margin: 0;
+            padding: 0;
+        }
+        .el{
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        h2{
+            cursor: pointer;
+        }
+        h2::before{
+            content: "";
+            display: block;
+            height: 4px;
+            width: 100%;
+            background-color: lime;
+            transform: translate(0px, 0px);
+            transition: 1s;
+        }
+        h2::after{
+            content: '';
+            display: block;
+            height: 4px;
+            width: 100%;
+            background-color: red;
+            transform: translate(0px, 0px);
+            transition: .4s;
+        }
+        h2:hover::before{
+            transform: scale(1);
+            transform: translate(0px, 30px);
+        }
+        h2:hover::after{
+            transform: scale(1);
+            transform: translate(0px, -30px);
+        }
+                .yazi{
+            font-size: 200px;
+            font-weight: 900;
+            font-family: arial;
+            background-image: url(asd.jpeg);
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: black;
+            transition: 1s;
+        }
+        .yazi:hover{
+            color: transparent;
+            filter: drop-shadow(8px 8px 8px black);
+            scale: 1.04;
+        }
+        .box{
+            margin: 20px;
+            height: 200px;
+            width: 200px;
+            background-image: url(dsa.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+        }
+        .box::before{
+            content: '';
+            text-align: center;
+            color: white;
+            line-height: 260px;
+            background-image: url(sda.jpeg);
+            background-size: cover;
+            position: absolute;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: rotateZ();
+            opacity: 0%;
+            transition: .4s;
+        }
+        .box:hover::before{
+            transform: rotateZ(360deg);
+            opacity: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="el">
+        <h2>Quluzade Ayan</h2>
+    </div>
+    <div class="box"></div>
+    <div class="yazi">AYAN</div>
+</body>
+</html>
